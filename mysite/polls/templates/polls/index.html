@@ -1,8 +1,10 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-<!--         <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
-	<!-- new -->
+    	<!-- for q7 old -->
+ <!--        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
+    	<!-- for q7 new -->
+<!--     	href link , Url is /polls/ + id-->
 		<li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
